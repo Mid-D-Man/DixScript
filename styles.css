@@ -1,0 +1,138 @@
+
+body {
+    font-family: Arial, sans-serif;
+    overflow-y: auto;
+    margin: 0;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f9f9f9;
+}
+
+.editor-container{
+    width: 80%;
+    margin: 40px auto;
+    padding: 20px; 
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 10ox;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.line-numbers{
+ position: absolute;
+ top: 0;
+ left: 0;
+ padding: 10px;
+ background-color: #f0f0f0;
+ border-right: 1px solid #ccc;
+}
+.line-numbers span{
+    display: block;
+    padding: 10px;
+}
+#dixTextArea{
+    width: 100%;
+    height: 300px;
+    padding: 10px;
+    font-size: 14px;
+    border: none;
+    border-radius: 10px;
+    resize: none;
+}
+#dixTextArea:focus{
+    outline: none;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.status-bar{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-top: 1px solid #ccc;
+}
+
+.status-bar p{
+    margin: 0;
+}
+
+
+.dark-mode{
+    background-color: #333;
+    color: #fff;
+}
+.dark-mode #dixTextArea{
+    background-color:  #444;
+    color: #fff;
+
+}
+.dark-mode body{
+    background-color: #8a8080;
+}
+
+.dark-mode .line-numbers{
+    background-color :#444;
+    border-right: 1px solid #555;
+}
+.dark-mode .status-bar{
+    background-color: #444;
+    border-top: 1px solid #555;
+}
+
+.light-mode{
+    background-color: #fff;
+    color: #333;
+}
+.light-mode #dixTextArea{
+    background-color: #f0f0f0;
+    color: #333;
+
+}
+.light-mode body{
+    background-color: #f0f0f0;
+}
+
+.light-mode .line-numbers{
+    background-color: #f0f0f0;
+   border-right: 1px solid #ccc;
+}
+
+.light-mode .status-bar{
+    background-color: #f0f0f0;
+   border-top: 1px solid #ccc;
+}
+
+button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #0074d9;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: backgrount-color 0.3s;
+}
+button:active{
+    transform: scale(0.95);
+    transition:transform 0.1s;
+}
+
+button.clicked {
+    background-color: greenyellow;
+    transition: background-color 0.2s;
+}
+
+.highlight{
+    color: greenyellow;
+}
+.keyword{
+    color: blue;
+}
+.operator{
+    color: red;
+}
+
